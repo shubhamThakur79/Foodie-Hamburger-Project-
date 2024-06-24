@@ -1,0 +1,256 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+body,
+html {
+    background-color: rgba(235, 228, 228, 0.616);
+    scroll-behavior: smooth;
+}
+
+header {
+    background-color: #fff;
+    /* box-shadow:0px 0px 2px rgb(95, 92, 92) ; */
+    height: 90px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-inline: 50px;
+    position: fixed;
+    top: 0px;
+    width: 100%;
+    /* margin-bottom: 200px; */
+}
+
+nav {
+    display: flex;
+    gap: 50px;
+    transition: all 0.5s ease-in-out;
+    border-top-left-radius: 80%;
+    border-bottom-right-radius: 80%;
+    border-bottom-left-radius: 50%;
+    border-top-right-radius: 50%;
+    background-color: rgba(0, 255, 255, 0.082);
+    padding: 20px;
+
+
+}
+
+nav a {
+    color: black;
+    text-decoration: none;
+    font-size: x-large;
+    font-weight: 800;
+    position: relative;
+    /* padding: 10px; */
+}
+
+nav a::before {
+    content: '';
+    height: 4px;
+    /* Changed from 40px to 4px for a subtle underline */
+    width: 100%;
+    background: indianred;
+    position: absolute;
+    bottom: -15px;
+    left: 0;
+    transform: scaleX(0);
+    transform-origin: right;
+    transition: transform 0.3s linear;
+}
+
+
+nav a:hover::before {
+    transform: scaleX(1);
+    transform-origin: left;
+}
+
+.logo {
+    height: 50px;
+    /* background-color: red; */
+    width: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.logo img {
+    height: 100%;
+    width: 100%;
+}
+
+.hero-section {
+    height: 100vh;
+    width: 90vw;
+    margin: auto;
+    padding-top: 90px;
+    margin-top: 60px
+
+}
+
+.hero-section img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+.hero-section p {
+    font-weight: 500;
+    font-size: x-large;
+    text-align: center;
+    margin-block: 20px;
+}
+
+.menu {
+    margin-top: 100px;
+    display: flex;
+    flex-direction: column;
+    gap: 100px;
+    text-align: center;
+
+}
+
+.h img {
+    height: 90vh;
+}
+
+.menu h1 {
+    font-size: 60px;
+    padding-bottom: 50px;
+    color: brown;
+}
+
+footer {
+    margin-block: 50px;
+
+}
+
+footer a {
+    color: black;
+    font-weight: 800;
+    margin-left: 75%;
+    font-size: x-large;
+    letter-spacing: 2px;
+}
+
+footer p {
+    text-align: center;
+    font-size: 25px;
+    color: rgba(0, 0, 0, 0.651);
+}
+
+header .fa-solid {
+    display: none;
+    font-size: x-large;
+    transition: all 2s linear;
+    position: absolute;
+    top: 12px;
+    left: 24px;
+    cursor: pointer;
+
+}
+
+.back {
+    /* background-color: rgb(0, 183, 255); */
+    background-color: #fff;
+    height: 60px;
+    width: 60px;
+    margin-right: -35px;
+    border-bottom-left-radius: 100%;
+    position: relative;
+    display: none;
+}
+
+
+/* responsive code for phones */
+@media (max-width: 599px) {
+    html {
+        overflow-x: hidden;
+
+    }
+
+    nav {
+        /* display: none; */
+        height: 60vh;
+        flex-direction: column;
+        gap: 30px;
+        align-items: start;
+        margin-top: 70px;
+        width: 60%;
+        /* padding: 50px 0px 50px 50px; */
+        position: absolute;
+        top: -70px;
+        right: -700px;
+
+        border-top-left-radius: 0%;
+        border-bottom-right-radius: 0%;
+        border-bottom-left-radius: 0%;
+        border-top-right-radius: 0%;
+        background-color: #fff;
+
+
+    }
+
+    header {
+        position: relative;
+        height: 60px;
+   background: rgba(221, 216, 216, 0);
+        position: fixed;
+        top: 0;
+        width: 100%;
+        backdrop-filter: blur(200px);
+    }
+
+    header .fa-bars {
+        display: block;
+        position: absolute;
+        right: 30px;
+    }
+
+    .logo{
+        /* background-color: red; */
+        margin-left: -20px;
+    }
+    .hero-section {
+        height: 60vh;
+        width: 100%;
+        margin: auto;
+        padding-top: 10px;
+        margin-top: 80px;
+    }
+
+    .menu {
+        margin-top: 70px;
+
+        flex-direction: column;
+        gap: 70px;
+
+
+    }
+
+    .h img {
+        height: 50vh;
+        width: 350px;
+    }
+
+    .menu h1 {
+        font-size: 40px;
+        padding-bottom: 30px;
+
+    }
+
+    footer a {
+        color: black;
+        font-weight: 600;
+        margin-left: 58%;
+        font-size: larger;
+        margin-bottom: 50px;
+    }
+
+    .back {
+        display: block;
+    }
+}
